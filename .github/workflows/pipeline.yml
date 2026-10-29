@@ -21,6 +21,6 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
-        docker build -t "${{ secrets.DOCKERHUB_USERNAME }}/student-grade-app:${{ github.sha }}" .
-        docker push "${{ secrets.DOCKERHUB_USERNAME }}/student-grade-app:${{ github.sha }}"
+        echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "ankitashoksharma2024" --password-stdin
+        docker build -t ankitashoksharma2024/student-grade-app:${{ github.sha }} .
+        docker push ankitashoksharma2024/student-grade-app:${{ github.sha }}
